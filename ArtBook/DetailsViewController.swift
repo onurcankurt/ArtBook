@@ -16,6 +16,9 @@ class DetailsViewController: UIViewController, UIImagePickerControllerDelegate, 
     @IBOutlet weak var yearText: UITextField!
     @IBOutlet weak var kaydetButton: UIButton!
     
+    var yollananResim = ""
+    var yollananResimId : UUID?
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -23,6 +26,60 @@ class DetailsViewController: UIViewController, UIImagePickerControllerDelegate, 
         kaydetButton.isEnabled = false
 
         // Do any additional setup after loading the view.
+        
+        if yollananResim != ""{
+            kaydetButton.isHidden = true
+            
+            let appDelegate = UIApplication.shared.delegate as! AppDelegate
+            let context = appDelegate.persistentContainer.viewContext
+            
+            let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: "Paintings")
+            
+            let idString = yollananResimId?.uuidString
+            if let id = idString{
+                fetchRequest.predicate = NSPredicate(format: "id = %@", id)
+                
+                do{
+                    let results = try context.fetch(fetchRequest)
+                    if results.count > 0 {
+                        
+                        for result in results as! [NSManagedObject] {
+                            if let name = result.value(forKey: "name") as? String {
+                                artName.text = name
+                            }
+                            
+                            if let artist = result.value(forKey: "artist") as? String {
+                                artistName.text = artist
+                            }
+                            
+                            if let year = result.value(forKey: "year") as? Int {
+                                yearText.text = String(year)
+                            }
+                            
+                            if let imageData = result.value(forKey: "image") as? Data{
+                                let image = UIImage(data: imageData)
+                                imageView.image = image
+                            }
+                        }
+                    }
+                    
+                }catch{
+                    print("hata")
+                }
+            }
+            
+            
+
+        }
+        else{
+            artistName.text = ""
+            artName.text = ""
+            yearText.text = ""
+            kaydetButton.isEnabled = false
+            kaydetButton.isHidden = false
+        }
+        
+        
         let gestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(hideKeyboard))
         view.addGestureRecognizer(gestureRecognizer)
         
