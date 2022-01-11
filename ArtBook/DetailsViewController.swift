@@ -80,7 +80,10 @@ class DetailsViewController: UIViewController, UIImagePickerControllerDelegate, 
             print("hata oldu")
         }
         
+        
+        NotificationCenter.default.post(name: NSNotification.Name("resimEklendi"), object: nil)
         navigationController?.popViewController(animated: true)
+        
         
         
         
