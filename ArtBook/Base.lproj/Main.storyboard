@@ -48,28 +48,37 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="in1-e9-0Sp">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="select-2244784_1280" translatesAutoresizingMaskIntoConstraints="NO" id="in1-e9-0Sp">
                                 <rect key="frame" x="43" y="111" width="330" height="312"/>
                             </imageView>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Sanatçının Adı" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="2hp-FO-dsJ">
                                 <rect key="frame" x="43" y="489" width="330" height="34"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="34" id="osE-kI-1Qu"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Resmin Adı" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="MQa-38-RCa">
                                 <rect key="frame" x="43" y="553" width="330" height="34"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="34" id="l3g-nw-uyB"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Resmin Yılı" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="xuw-El-mqF">
                                 <rect key="frame" x="43" y="620" width="330" height="34"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="34" id="cx6-yn-C17"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cpI-bj-mSQ">
                                 <rect key="frame" x="139" y="677" width="137" height="46"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="46" id="FsU-VZ-1tO"/>
+                                    <constraint firstAttribute="height" constant="46" id="rR9-gE-kbd"/>
                                 </constraints>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Kaydet"/>
@@ -81,22 +90,22 @@
                         <viewLayoutGuide key="safeArea" id="hSf-NE-5WK"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="cpI-bj-mSQ" firstAttribute="leading" secondItem="hSf-NE-5WK" secondAttribute="leading" constant="139" id="1f5-aB-Jtq"/>
-                            <constraint firstItem="2hp-FO-dsJ" firstAttribute="trailing" secondItem="MQa-38-RCa" secondAttribute="trailing" id="443-gi-EQa"/>
-                            <constraint firstItem="in1-e9-0Sp" firstAttribute="leading" secondItem="2hp-FO-dsJ" secondAttribute="leading" id="53q-wn-fo9"/>
-                            <constraint firstItem="xuw-El-mqF" firstAttribute="centerX" secondItem="cpI-bj-mSQ" secondAttribute="centerX" id="Aki-Ou-eoE"/>
-                            <constraint firstItem="xuw-El-mqF" firstAttribute="top" secondItem="MQa-38-RCa" secondAttribute="bottom" constant="33" id="BWz-jz-sEg"/>
-                            <constraint firstItem="in1-e9-0Sp" firstAttribute="leading" secondItem="hSf-NE-5WK" secondAttribute="leading" constant="43" id="Ekh-0x-SPh"/>
-                            <constraint firstItem="cpI-bj-mSQ" firstAttribute="top" secondItem="xuw-El-mqF" secondAttribute="bottom" constant="23" id="HUV-gb-JsP"/>
-                            <constraint firstItem="2hp-FO-dsJ" firstAttribute="leading" secondItem="MQa-38-RCa" secondAttribute="leading" id="KFG-aa-Drh"/>
-                            <constraint firstItem="in1-e9-0Sp" firstAttribute="trailing" secondItem="2hp-FO-dsJ" secondAttribute="trailing" id="O2C-Cj-7AR"/>
-                            <constraint firstItem="MQa-38-RCa" firstAttribute="leading" secondItem="xuw-El-mqF" secondAttribute="leading" id="Rbh-T8-jqo"/>
-                            <constraint firstItem="2hp-FO-dsJ" firstAttribute="top" secondItem="in1-e9-0Sp" secondAttribute="bottom" constant="66" id="TLT-vh-ADI"/>
-                            <constraint firstItem="hSf-NE-5WK" firstAttribute="bottom" secondItem="cpI-bj-mSQ" secondAttribute="bottom" constant="139" id="TUi-AQ-fi3"/>
-                            <constraint firstItem="MQa-38-RCa" firstAttribute="trailing" secondItem="xuw-El-mqF" secondAttribute="trailing" id="ZaB-Ln-GPQ"/>
-                            <constraint firstItem="in1-e9-0Sp" firstAttribute="top" secondItem="hSf-NE-5WK" secondAttribute="top" constant="23" id="mdA-SC-VQi"/>
-                            <constraint firstItem="MQa-38-RCa" firstAttribute="top" secondItem="2hp-FO-dsJ" secondAttribute="bottom" constant="30" id="sYg-ES-ePy"/>
-                            <constraint firstItem="hSf-NE-5WK" firstAttribute="trailing" secondItem="in1-e9-0Sp" secondAttribute="trailing" constant="41" id="wLy-pv-WTR"/>
+                            <constraint firstItem="cpI-bj-mSQ" firstAttribute="leading" secondItem="hSf-NE-5WK" secondAttribute="leading" constant="139" id="36J-wl-BJM"/>
+                            <constraint firstItem="2hp-FO-dsJ" firstAttribute="leading" secondItem="MQa-38-RCa" secondAttribute="leading" id="8e9-yE-Crf"/>
+                            <constraint firstItem="in1-e9-0Sp" firstAttribute="leading" secondItem="2hp-FO-dsJ" secondAttribute="leading" id="AJl-g5-qad"/>
+                            <constraint firstItem="2hp-FO-dsJ" firstAttribute="trailing" secondItem="MQa-38-RCa" secondAttribute="trailing" id="KCd-Bd-ezk"/>
+                            <constraint firstItem="MQa-38-RCa" firstAttribute="trailing" secondItem="xuw-El-mqF" secondAttribute="trailing" id="KOU-eL-gSE"/>
+                            <constraint firstItem="MQa-38-RCa" firstAttribute="top" secondItem="2hp-FO-dsJ" secondAttribute="bottom" constant="30" id="PBN-MZ-Zka"/>
+                            <constraint firstItem="cpI-bj-mSQ" firstAttribute="top" secondItem="xuw-El-mqF" secondAttribute="bottom" constant="23" id="PrD-6y-gye"/>
+                            <constraint firstItem="xuw-El-mqF" firstAttribute="centerX" secondItem="cpI-bj-mSQ" secondAttribute="centerX" id="Uwb-q1-wKm"/>
+                            <constraint firstItem="hSf-NE-5WK" firstAttribute="bottom" secondItem="cpI-bj-mSQ" secondAttribute="bottom" constant="139" id="b2p-ZA-wWS"/>
+                            <constraint firstItem="in1-e9-0Sp" firstAttribute="top" secondItem="hSf-NE-5WK" secondAttribute="top" constant="23" id="c95-sW-M4J"/>
+                            <constraint firstItem="hSf-NE-5WK" firstAttribute="trailing" secondItem="in1-e9-0Sp" secondAttribute="trailing" constant="41" id="cQk-Gd-l4U"/>
+                            <constraint firstItem="in1-e9-0Sp" firstAttribute="trailing" secondItem="2hp-FO-dsJ" secondAttribute="trailing" id="csi-SZ-Hlh"/>
+                            <constraint firstItem="xuw-El-mqF" firstAttribute="top" secondItem="MQa-38-RCa" secondAttribute="bottom" constant="33" id="gz1-FO-4Vr"/>
+                            <constraint firstItem="in1-e9-0Sp" firstAttribute="leading" secondItem="hSf-NE-5WK" secondAttribute="leading" constant="43" id="ruv-Yf-QHY"/>
+                            <constraint firstItem="MQa-38-RCa" firstAttribute="leading" secondItem="xuw-El-mqF" secondAttribute="leading" id="tAf-sU-ohg"/>
+                            <constraint firstItem="2hp-FO-dsJ" firstAttribute="top" secondItem="in1-e9-0Sp" secondAttribute="bottom" constant="66" id="zuq-mY-YpS"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="EmF-6I-gBM"/>
@@ -132,6 +141,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="select-2244784_1280" width="1280" height="1280"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
